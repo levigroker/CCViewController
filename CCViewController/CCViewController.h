@@ -37,6 +37,9 @@
 
 // NOTE: If you have multiple CCViewController subclasses, you must take care the createDirectorGLView and didInitializeDirector set up the Cocos2D director exactly the same in each instance. Otherwise, you may get unexpected results. To avoid this, create another subclass that sits between CCViewController and your other subclasses, and place these methods there.
 
+// Override this method to provide a different CCDirector.
+- (CCDirector *)director;
+
 // Override this method to customize the CCGLView that is created for the director.
 - (CCGLView *)createDirectorGLView;
 

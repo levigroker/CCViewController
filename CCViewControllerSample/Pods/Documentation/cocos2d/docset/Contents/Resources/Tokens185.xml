@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCTransitionCrossFade.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCTransitionCrossFade</TokenIdentifier>
+			<Abstract>CCTransitionCrossFade:
+Cross fades two scenes using the CCRenderTexture object.</Abstract>
+			<DeclaredIn>CCTransition.h</DeclaredIn>
+			
+			<NodeRef refid="185"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

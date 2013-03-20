@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCCallFuncN.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCCallFuncN</TokenIdentifier>
+			<Abstract>Calls a 'callback' with the node as the first argument.
+N means Node</Abstract>
+			<DeclaredIn>CCActionInstant.h</DeclaredIn>
+			
+			<NodeRef refid="24"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

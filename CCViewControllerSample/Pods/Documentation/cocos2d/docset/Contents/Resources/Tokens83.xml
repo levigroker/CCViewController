@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCGridBase.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCGridBase</TokenIdentifier>
+			<Abstract>Base class for other</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>
+			
+			<NodeRef refid="83"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setActive:</TokenIdentifier>
+			<Abstract>wheter or not the grid is active</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL active</Declaration>
+			
+			
+			<Anchor>//api/name/active</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/active</TokenIdentifier>
+			<Abstract>wheter or not the grid is active</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL active</Declaration>
+			
+			
+			<Anchor>//api/name/active</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setReuseGrid:</TokenIdentifier>
+			<Abstract>number of times that the grid will be reused</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) int reuseGrid</Declaration>
+			
+			
+			<Anchor>//api/name/reuseGrid</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/reuseGrid</TokenIdentifier>
+			<Abstract>number of times that the grid will be reused</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) int reuseGrid</Declaration>
+			
+			
+			<Anchor>//api/name/reuseGrid</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setGridSize:</TokenIdentifier>
+			<Abstract>size of the grid</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) ccGridSize gridSize</Declaration>
+			
+			
+			<Anchor>//api/name/gridSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/gridSize</TokenIdentifier>
+			<Abstract>size of the grid</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) ccGridSize gridSize</Declaration>
+			
+			
+			<Anchor>//api/name/gridSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setStep:</TokenIdentifier>
+			<Abstract>pixels between the grids</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) CGPoint step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/step</TokenIdentifier>
+			<Abstract>pixels between the grids</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) CGPoint step</Declaration>
+			
+			
+			<Anchor>//api/name/step</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setTexture:</TokenIdentifier>
+			<Abstract>texture used</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) CCTexture2D *texture</Declaration>
+			
+			
+			<Anchor>//api/name/texture</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/texture</TokenIdentifier>
+			<Abstract>texture used</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) CCTexture2D *texture</Declaration>
+			
+			
+			<Anchor>//api/name/texture</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setGrabber:</TokenIdentifier>
+			<Abstract>grabber used</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) CCGrabber *grabber</Declaration>
+			
+			
+			<Anchor>//api/name/grabber</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/grabber</TokenIdentifier>
+			<Abstract>grabber used</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) CCGrabber *grabber</Declaration>
+			
+			
+			<Anchor>//api/name/grabber</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setIsTextureFlipped:</TokenIdentifier>
+			<Abstract>is texture flipped</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isTextureFlipped</Declaration>
+			
+			
+			<Anchor>//api/name/isTextureFlipped</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/isTextureFlipped</TokenIdentifier>
+			<Abstract>is texture flipped</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isTextureFlipped</Declaration>
+			
+			
+			<Anchor>//api/name/isTextureFlipped</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/setShaderProgram:</TokenIdentifier>
+			<Abstract>shader program</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, assign) CCGLProgram *shaderProgram</Declaration>
+			
+			
+			<Anchor>//api/name/shaderProgram</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCGridBase/shaderProgram</TokenIdentifier>
+			<Abstract>shader program</Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, assign) CCGLProgram *shaderProgram</Declaration>
+			
+			
+			<Anchor>//api/name/shaderProgram</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCGridBase/gridWithSize:texture:flippedTexture:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>+ (id)gridWithSize:(ccGridSize)gridSize texture:(CCTexture2D *)texture flippedTexture:(BOOL)flipped</Declaration>
+			
+			
+			<Anchor>//api/name/gridWithSize:texture:flippedTexture:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCGridBase/gridWithSize:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>+ (id)gridWithSize:(ccGridSize)gridSize</Declaration>
+			
+			
+			<Anchor>//api/name/gridWithSize:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/initWithSize:texture:flippedTexture:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithSize:(ccGridSize)gridSize texture:(CCTexture2D *)texture flippedTexture:(BOOL)flipped</Declaration>
+			
+			
+			<Anchor>//api/name/initWithSize:texture:flippedTexture:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/initWithSize:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithSize:(ccGridSize)gridSize</Declaration>
+			
+			
+			<Anchor>//api/name/initWithSize:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/beforeDraw</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>- (void)beforeDraw</Declaration>
+			
+			
+			<Anchor>//api/name/beforeDraw</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/afterDraw:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>- (void)afterDraw:(CCNode *)target</Declaration>
+			
+			
+			<Anchor>//api/name/afterDraw:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/blit</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>- (void)blit</Declaration>
+			
+			
+			<Anchor>//api/name/blit</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/reuse</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>- (void)reuse</Declaration>
+			
+			
+			<Anchor>//api/name/reuse</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCGridBase/calculateVertexPoints</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>CCGrid.h</DeclaredIn>			
+			
+			<Declaration>- (void)calculateVertexPoints</Declaration>
+			
+			
+			<Anchor>//api/name/calculateVertexPoints</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

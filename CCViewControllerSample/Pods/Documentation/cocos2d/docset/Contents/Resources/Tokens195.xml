@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCTransitionMoveInB.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCTransitionMoveInB</TokenIdentifier>
+			<Abstract>CCTransitionMoveInB:
+Move in from to the bottom the incoming scene.</Abstract>
+			<DeclaredIn>CCTransition.h</DeclaredIn>
+			
+			<NodeRef refid="195"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCTransitionRotoZoom.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCTransitionRotoZoom</TokenIdentifier>
+			<Abstract>CCTransitionRotoZoom:
+Rotate and zoom out the outgoing scene, and then rotate and zoom in the incoming</Abstract>
+			<DeclaredIn>CCTransition.h</DeclaredIn>
+			
+			<NodeRef refid="207"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

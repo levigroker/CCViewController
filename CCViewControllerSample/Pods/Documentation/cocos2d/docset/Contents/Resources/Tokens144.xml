@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCScheduler.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCScheduler</TokenIdentifier>
+			<Abstract>CCScheduler is responsible of triggering the scheduled callbacks.
+You should not use NSTimer. Instead use this class.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>
+			
+			<NodeRef refid="144"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/setTimeScale:</TokenIdentifier>
+			<Abstract>Modifies the time of all scheduled callbacks.
+You can use this property to create a 'slow motion' or 'fast fordward' effect.
+Default is 1.0. To create a 'slow motion' effect, use values below 1.0.
+To create a 'fast fordward' effect, use values higher than 1.0.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) ccTime timeScale</Declaration>
+			
+			
+			<Anchor>//api/name/timeScale</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCScheduler/timeScale</TokenIdentifier>
+			<Abstract>Modifies the time of all scheduled callbacks.
+You can use this property to create a 'slow motion' or 'fast fordward' effect.
+Default is 1.0. To create a 'slow motion' effect, use values below 1.0.
+To create a 'fast fordward' effect, use values higher than 1.0.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) ccTime timeScale</Declaration>
+			
+			
+			<Anchor>//api/name/timeScale</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/update:</TokenIdentifier>
+			<Abstract>'update' the scheduler.
+You should NEVER call this method, unless you know what you are doing.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)update:(ccTime)dt</Declaration>
+			
+			
+			<Anchor>//api/name/update:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/scheduleSelector:forTarget:interval:paused:repeat:delay:</TokenIdentifier>
+			<Abstract>The scheduled method will be called every 'interval' seconds.
+If paused is YES, then it won't be called until it is resumed.
+If 'interval' is 0, it will be called every frame, but if so, it recommened to use 'scheduleUpdateForTarget:' instead.
+If the selector is already scheduled, then only the interval parameter will be updated without re-scheduling it again.
+repeat let the action be repeated repeat + 1 times, use kCCRepeatForever to let the action run continiously
+delay is the amount of time the action will wait before it'll start</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)scheduleSelector:(SEL)selector forTarget:(id)target interval:(ccTime)interval paused:(BOOL)paused repeat:(uint)repeat delay:(ccTime)delay</Declaration>
+			
+			
+			<Anchor>//api/name/scheduleSelector:forTarget:interval:paused:repeat:delay:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/scheduleSelector:forTarget:interval:paused:</TokenIdentifier>
+			<Abstract>calls scheduleSelector with kCCRepeatForever and a 0 delay</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)scheduleSelector:(SEL)selector forTarget:(id)target interval:(ccTime)interval paused:(BOOL)paused</Declaration>
+			
+			
+			<Anchor>//api/name/scheduleSelector:forTarget:interval:paused:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/scheduleUpdateForTarget:priority:paused:</TokenIdentifier>
+			<Abstract>Schedules the 'update' selector for a given target with a given priority.
+The 'update' selector will be called every frame.
+The lower the priority, the earlier it is called.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)scheduleUpdateForTarget:(id)target priority:(NSInteger)priority paused:(BOOL)paused</Declaration>
+			
+			
+			<Anchor>//api/name/scheduleUpdateForTarget:priority:paused:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/unscheduleSelector:forTarget:</TokenIdentifier>
+			<Abstract>Unshedules a selector for a given target.
+If you want to unschedule the "update", use unscheudleUpdateForTarget.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)unscheduleSelector:(SEL)selector forTarget:(id)target</Declaration>
+			
+			
+			<Anchor>//api/name/unscheduleSelector:forTarget:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/unscheduleUpdateForTarget:</TokenIdentifier>
+			<Abstract>Unschedules the update selector for a given target</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)unscheduleUpdateForTarget:(id)target</Declaration>
+			
+			
+			<Anchor>//api/name/unscheduleUpdateForTarget:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/unscheduleAllSelectorsForTarget:</TokenIdentifier>
+			<Abstract>Unschedules all selectors for a given target.
+This also includes the "update" selector.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)unscheduleAllSelectorsForTarget:(id)target</Declaration>
+			
+			
+			<Anchor>//api/name/unscheduleAllSelectorsForTarget:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/unscheduleAllSelectors</TokenIdentifier>
+			<Abstract>Unschedules all selectors from all targets.
+You should NEVER call this method, unless you know what you are doing.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)unscheduleAllSelectors</Declaration>
+			
+			
+			<Anchor>//api/name/unscheduleAllSelectors</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/unscheduleAllSelectorsWithMinPriority:</TokenIdentifier>
+			<Abstract>Unschedules all selectors from all targets with a minimum priority.
+  You should only call this with kCCPriorityNonSystemMin or higher.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)unscheduleAllSelectorsWithMinPriority:(NSInteger)minPriority</Declaration>
+			
+			
+			<Anchor>//api/name/unscheduleAllSelectorsWithMinPriority:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/pauseTarget:</TokenIdentifier>
+			<Abstract>Pauses the target.
+All scheduled selectors/update for a given target won't be 'ticked' until the target is resumed.
+If the target is not present, nothing happens.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)pauseTarget:(id)target</Declaration>
+			
+			
+			<Anchor>//api/name/pauseTarget:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/resumeTarget:</TokenIdentifier>
+			<Abstract>Resumes the target.
+The 'target' will be unpaused, so all schedule selectors/update will be 'ticked' again.
+If the target is not present, nothing happens.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)resumeTarget:(id)target</Declaration>
+			
+			
+			<Anchor>//api/name/resumeTarget:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/isTargetPaused:</TokenIdentifier>
+			<Abstract>Returns whether or not the target is paused</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isTargetPaused:(id)target</Declaration>
+			
+			
+			<Anchor>//api/name/isTargetPaused:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/pauseAllTargets</TokenIdentifier>
+			<Abstract>Pause all selectors from all targets.
+  You should NEVER call this method, unless you know what you are doing.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (NSSet *)pauseAllTargets</Declaration>
+			
+			
+			<Anchor>//api/name/pauseAllTargets</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/pauseAllTargetsWithMinPriority:</TokenIdentifier>
+			<Abstract>Pause all selectors from all targets with a minimum priority.
+  You should only call this with kCCPriorityNonSystemMin or higher.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (NSSet *)pauseAllTargetsWithMinPriority:(NSInteger)minPriority</Declaration>
+			
+			
+			<Anchor>//api/name/pauseAllTargetsWithMinPriority:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCScheduler/resumeTargets:</TokenIdentifier>
+			<Abstract>Resume selectors on a set of targets.
+This can be useful for undoing a call to pauseAllSelectors.</Abstract>
+			<DeclaredIn>CCScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (void)resumeTargets:(NSSet *)targetsToResume</Declaration>
+			
+			
+			<Anchor>//api/name/resumeTargets:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCScheduler/sharedScheduler</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ccDeprecated.h</DeclaredIn>			
+			
+			<Declaration>+ (CCScheduler *)sharedScheduler</Declaration>
+			
+			
+			<Anchor>//api/name/sharedScheduler</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

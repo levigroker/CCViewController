@@ -29,18 +29,32 @@
 
 @implementation CCViewController
 
+#pragma mark - lifecycle
+
+- (void)dealloc
+{
+    CCDirector *director = [self director];
+    director.delegate = nil;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    CCDirector *director = [CCDirector sharedDirector];
+    CCDirector *director = [self director];
 
     // If the director's OpenGL view hasn't been set up yet, then we should create it now. If you would like to prevent this "lazy loading", you should initialize the director and set its view elsewhere in your code.
     if([director isViewLoaded] == NO)
     {
         director.view = [self createDirectorGLView];
+        director.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+        // Default texture format for PNG/BMP/TIFF/JPEG/GIF images.
+        // It can be RGBA8888, RGBA4444, RGB5_A1, RGB565. You can change anytime.
+        CCTexture2D.defaultAlphaPixelFormat = kCCTexture2DPixelFormat_RGBA8888;
+
         [self didInitializeDirector];
     }
 
@@ -50,13 +64,11 @@
     [self addChildViewController:director];
     
     // Add the director's OpenGL view, and send it to the back of the view hierarchy so we can place UIKit elements on top of it.
-    [self.view addSubview:director.view];
-    [self.view sendSubviewToBack:director.view];
+    [self.view insertSubview:director.view atIndex:0];
     
     // Ensure we fulfill all of our view controller containment requirements.
     [director didMoveToParentViewController:self];
 }
-
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -107,12 +119,12 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationSignificantTimeChangeNotification object:nil];
 }
 
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
 
-    [[CCDirector sharedDirector] setDelegate:nil];
+    CCDirector *director = [self director];
+    director.delegate = nil;
 }
 
 
@@ -120,30 +132,37 @@
 {
     [super didReceiveMemoryWarning];
     
-    [[CCDirector sharedDirector] purgeCachedData];
+    [[self director] purgeCachedData];
 }
 
 
 #pragma mark - Setting up the director
 
+- (CCDirector *)director
+{
+    CCDirector *director = [CCDirector sharedDirector];
+    
+    return director;
+}
+
 - (CCGLView *)createDirectorGLView
 {
     // Create a default OpenGL view.
-    CCGLView *glView = [CCGLView viewWithFrame:[[[UIApplication sharedApplication] keyWindow] bounds]
-                                   pixelFormat:kEAGLColorFormatRGB565
-                                   depthFormat:0
-                            preserveBackbuffer:NO
-                                    sharegroup:nil
-                                 multiSampling:NO
-                               numberOfSamples:0];
-    
+	CCGLView *glView = [CCGLView viewWithFrame:self.view.bounds
+								   pixelFormat:kEAGLColorFormatRGBA8
+								   depthFormat:GL_DEPTH_COMPONENT16
+							preserveBackbuffer:NO
+									sharegroup:nil
+								 multiSampling:NO
+							   numberOfSamples:1];
+
     return glView;
 }
 
 
 - (void)didInitializeDirector
 {
-    CCDirector *director = [CCDirector sharedDirector];
+    CCDirector *director = [self director];
 
     // Set up some common director properties.
     [director setAnimationInterval:1.0f/60.0f];

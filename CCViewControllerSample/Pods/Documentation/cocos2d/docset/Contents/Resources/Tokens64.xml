@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCFadeOut.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCFadeOut</TokenIdentifier>
+			<Abstract>Fades Out an object that implements the CCRGBAProtocol protocol. It modifies the opacity from 255 to 0.
+The "reverse" of this action is FadeIn</Abstract>
+			<DeclaredIn>CCActionInterval.h</DeclaredIn>
+			
+			<NodeRef refid="64"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

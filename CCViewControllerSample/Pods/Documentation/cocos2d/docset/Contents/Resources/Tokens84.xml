@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCHide.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCHide</TokenIdentifier>
+			<Abstract>Hide the node</Abstract>
+			<DeclaredIn>CCActionInstant.h</DeclaredIn>
+			
+			<NodeRef refid="84"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>
