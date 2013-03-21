@@ -43,12 +43,13 @@
 // Override this method to customize the CCGLView that is created for the director.
 - (CCGLView *)createDirectorGLView;
 
-// Override this method if you would like to set additional options for the director when it is first initialized.
+// Override this method if you want to initialize the director yourself
 // By default, this method does the following:
+//  Sets the director.view to the results of createDirectorGLView
 //  [director setAnimationInterval:1.0f/60.0f];
 //  [director enableRetinaDisplay:YES];
-- (void)didInitializeDirector;
-
+//  CCTexture2D.defaultAlphaPixelFormat = kCCTexture2DPixelFormat_RGBA8888
+- (void)initalizeDirector:(CCDirector *)director;
 
 #pragma mark - Notification handlers
 

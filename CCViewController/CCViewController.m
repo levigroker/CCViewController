@@ -46,16 +46,9 @@
     CCDirector *director = [self director];
 
     // If the director's OpenGL view hasn't been set up yet, then we should create it now. If you would like to prevent this "lazy loading", you should initialize the director and set its view elsewhere in your code.
-    if([director isViewLoaded] == NO)
+    if ([director isViewLoaded] == NO)
     {
-        director.view = [self createDirectorGLView];
-        director.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
-        // Default texture format for PNG/BMP/TIFF/JPEG/GIF images.
-        // It can be RGBA8888, RGBA4444, RGB5_A1, RGB565. You can change anytime.
-        CCTexture2D.defaultAlphaPixelFormat = kCCTexture2DPixelFormat_RGBA8888;
-
-        [self didInitializeDirector];
+        [self initalizeDirector:director];
     }
 
     director.delegate = self;
@@ -145,6 +138,20 @@
     return director;
 }
 
+- (void)initalizeDirector:(CCDirector *)director
+{
+    director.view = [self createDirectorGLView];
+    director.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    // Set up some common director properties.
+    [director setAnimationInterval:1.0f/60.0f];
+    [director enableRetinaDisplay:YES];
+
+    // Default texture format for PNG/BMP/TIFF/JPEG/GIF images.
+    // It can be RGBA8888, RGBA4444, RGB5_A1, RGB565. You can change anytime.
+    CCTexture2D.defaultAlphaPixelFormat = kCCTexture2DPixelFormat_RGBA8888;
+}
+
 - (CCGLView *)createDirectorGLView
 {
     // Create a default OpenGL view.
@@ -155,20 +162,9 @@
 									sharegroup:nil
 								 multiSampling:NO
 							   numberOfSamples:1];
-
+    
     return glView;
 }
-
-
-- (void)didInitializeDirector
-{
-    CCDirector *director = [self director];
-
-    // Set up some common director properties.
-    [director setAnimationInterval:1.0f/60.0f];
-    [director enableRetinaDisplay:YES];
-}
-
 
 #pragma mark - Notification handlers
 
